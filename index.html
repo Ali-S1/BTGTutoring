@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TWE0K7ZYVJ"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-TWE0K7ZYVJ');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bridge the Gap Tutoring: Confidence, Clarity, Excellence</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* New Color Palette for Tutoring */
+        :root {
+            --primary: #2563EB; /* A strong, welcoming blue */
+            --secondary: #3B82F6; /* A slightly lighter blue */
+            --accent: #FCD34D; /* A bright, positive yellow */
+            --dark: #0a0a0a; /* Retained for very dark elements like footer background if needed */
+            --text-dark: #1F2937; /* Dark gray for main text */
+            --text-light: #F9FAFB; /* Light gray for text on dark backgrounds */
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #E0F2FE 0%, #DBEAFE 100%); /* Lighter, cleaner blue gradient */
+            color: var(--text-dark); /* Main text color */
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        
+        /* Navigation Styles */
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 2rem;
+            backdrop-filter: blur(10px);
+            background: rgba(255,255,255,0.9); /* Lighter, subtle transparent white */
+            border-bottom: 1px solid rgba(0,0,0,0.05); /* Subtle border */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Light shadow */
+        }
+        
+        .nav.scrolled {
+            padding: 1rem 2rem;
+            background: rgba(255,255,255,0.95); /* More opaque when scrolled */
+            box-shadow: 0 8px 12px -3px rgba(0, 0, 0, 0.15); /* More prominent shadow */
+        }
+        
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary); /* Use primary blue for logo text */
+            text-decoration: none; /* Ensure it's not a gradient text to be cleaner */
+            /* Removed -webkit-background-clip, -webkit-text-fill-color etc. for cleaner text */
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--text-dark); /* Dark text for links */
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary); /* Primary blue on hover */
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            /* New background gradient for tutoring */
+            background: 
+                radial-gradient(circle at 30% 70%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 30%, rgba(37, 99, 235, 0.1) 0%, transparent 50%);
+        }
+        
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+        
+        .hero-title {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 800;
+            line-height: 0.9;
+            margin-bottom: 1.5rem;
+            color: var(--primary); /* Primary blue for title */
+            /* Removed text gradient for cleaner look */
+        }
+        
+        .hero-subtitle {
+            font-size: 1.4rem;
+            color: var(--text-dark); /* Dark text for subtitle */
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+        }
+        
+        .cta-container {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-primary, .cta-secondary {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+        
+        .cta-primary {
+            background: var(--accent); /* Accent yellow for primary CTA */
+            color: var(--primary); /* Blue text on yellow */
+            box-shadow: 0 10px 30px rgba(252, 211, 77, 0.3); /* Yellow shadow */
+        }
+        
+        .cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(252, 211, 77, 0.4);
+            background: var(--accent); /* Retain color on hover for consistency */
+        }
+        
+        .cta-secondary {
+            background: transparent;
+            color: var(--primary); /* Primary blue text */
+            border: 2px solid var(--primary); /* Primary blue border */
+        }
+        
+        .cta-secondary:hover {
+            background: var(--primary); /* Primary blue fill on hover */
+            color: white;
+        }
+        
+        /* Section Styles */
+        .section {
+            padding: 6rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary); /* Primary blue for section titles */
+            /* Removed text gradient for cleaner look */
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary)); /* Blue gradient underline */
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        /* Service Cards (formerly Menu Cards) */
+        .service-showcase { /* Changed from .menu-showcase */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        
+        .service-card { /* Changed from .menu-card */
+            background: #ffffff; /* White background for cards */
+            border: 1px solid rgba(0,0,0,0.05); /* Subtle border */
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05); /* Soft shadow */
+        }
+        
+        .service-card:hover { /* Changed from .menu-card:hover */
+            transform: translateY(-10px);
+            background: #F0F8FF; /* Very light blue on hover */
+            border-color: rgba(37, 99, 235, 0.3); /* Primary blue border on hover */
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.2); /* Primary blue shadow */
+        }
+        
+        .service-card-header { /* Changed from .menu-card-header */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .service-card h3 { /* Changed from .menu-card h3 */
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary); /* Primary blue for service titles */
+        }
+        
+        .service-card .price { /* Changed from .menu-card .price */
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--secondary); /* Secondary blue for price (or green for fixed prices) */
+        }
+        
+        .service-card p { /* Changed from .menu-card p */
+            color: var(--text-dark); /* Dark text for descriptions */
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .service-card-footer { /* Changed from .menu-card-footer */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .add-to-cart { /* Changed from .add-to-cart to a more generic button style */
+            background: var(--accent); /* Accent yellow for buttons */
+            color: var(--primary); /* Primary blue text on button */
+            padding: 0.7rem 1.3rem;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .add-to-cart:hover {
+            transform: scale(1.05);
+            background: var(--accent); /* Maintain accent on hover */
+        }
+        
+        .rating {
+            color: var(--accent); /* Accent yellow for stars */
+            font-size: 1.1rem;
+        }
+        
+        /* About Section */
+        .about-showcase {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-top: 4rem;
+        }
+        
+        .about-text {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            margin-bottom: 2rem;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .stat-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.05); /* Light transparent white */
+            border-radius: 15px;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            background: rgba(37, 99, 235, 0.1); /* Light blue on hover */
+            transform: scale(1.02);
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary); /* Primary blue for stats */
+            display: block;
+        }
+        
+        .stat-label {
+            color: var(--text-dark); /* Dark text for labels */
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+        
+        .features-showcase {
+            display: grid;
+            gap: 1.5rem;
+        }
+        
+        .feature-premium {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: #ffffff; /* White background for features */
+            border-radius: 15px;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* Soft shadow */
+        }
+        
+        .feature-premium:hover {
+            transform: translateX(10px);
+            background: #F0F8FF; /* Light blue on hover */
+            border-color: rgba(37, 99, 235, 0.2);
+        }
+        
+        .feature-icon-premium {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary)); /* Blue gradient icon background */
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .feature-content h4 {
+            font-size: 1.1rem;
+            color: var(--primary); /* Primary blue for feature titles */
+            margin-bottom: 0.3rem;
+        }
+        
+        .feature-content p {
+            color: var(--text-dark); /* Dark text for feature descriptions */
+            font-size: 0.9rem;
+        }
+        
+        /* Contact Section */
+        .contact-premium {
+            background: rgba(37, 99, 235, 0.1); /* Light blue background for contact section */
+            border-radius: 30px;
+            padding: 4rem;
+            text-align: center;
+            margin: 4rem auto; /* Centered with margin */
+            max-width: 1000px; /* Constrain width */
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .contact-card-premium {
+            background: #ffffff; /* White background for contact cards */
+            backdrop-filter: blur(5px);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* Soft shadow */
+        }
+        
+        .contact-card-premium:hover {
+            transform: scale(1.03);
+            background: #F0F8FF; /* Light blue on hover */
+            border-color: rgba(37, 99, 235, 0.2);
+        }
+        
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+            color: var(--primary); /* Primary blue for icons */
+        }
+        
+        /* Footer */
+        .footer-premium {
+            background: #000000; /* Keep dark background for footer */
+            color: rgba(255,255,255,0.8);
+            padding: 3rem 2rem 1rem;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .footer-premium a {
+            color: var(--secondary); /* Secondary blue for footer links */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer-premium a:hover {
+            color: var(--primary); /* Primary blue on hover */
+        }
+        
+        /* Progress Bar (no changes here for theme, just keeping it) */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: rgba(0,0,0,0.1);
+            z-index: 10001;
+        }
+        
+        .scroll-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            width: 0%;
+            transition: width 0.1s ease;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .about-showcase { 
+                grid-template-columns: 1fr; 
+                gap: 2rem; 
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links { 
+                display: none; /* Hide desktop nav on mobile */
+            }
+            .section { 
+                padding: 4rem 1rem; 
+            }
+            .contact-premium { 
+                padding: 2rem; 
+            }
+            .cta-container { 
+                flex-direction: column; 
+                align-items: center; 
+            }
+            .service-showcase { /* Changed from .menu-showcase */
+                grid-template-columns: 1fr;
+            }
+            .stats-grid { 
+                grid-template-columns: 1fr; 
+            }
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-progress">
+        <div class="scroll-bar" id="scrollBar"></div>
+    </div>
+    
+    <nav class="nav" id="nav">
+        <div class="nav-content">
+            <!-- Logo/Business Name -->
+            <a href="#home" class="logo">Bridge the Gap Tutoring</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about-us">About Us</a></li> <!-- Updated link -->
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Unlock Your Child's Potential</h1>
+            <p class="hero-subtitle">Personalized Tutoring That Respects Your Child - and Your Budget</p>
+            <div class="cta-container">
+                <a href="#contact" class="cta-primary">Book a Free 45-Minute Trial Session</a>
+                <a href="#services" class="cta-secondary">Explore Our Subjects</a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="services" class="section">
+        <h2 class="section-title">Our Core Subjects & Support</h2>
+        <div class="service-showcase"> <!-- Changed class from menu-showcase -->
+            <div class="service-card"> <!-- Changed class from menu-card -->
+                <div class="service-card-header"> <!-- Changed class from menu-card-header -->
+                    <h3>Math (Grades 1-8)</h3>
+                </div>
+                <p>From basic arithmetic to pre-algebra concepts. We focus on conceptual understanding, problem-solving skills, and building a strong math foundation.</p>
+                <div class="service-card-footer"> <!-- Changed class from menu-card-footer -->
+                    <button class="add-to-cart">Learn More</button> <!-- Changed button text -->
+                    <div class="rating">★★★★★</div>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-card-header">
+                    <h3>English & Literacy</h3>
+                </div>
+                <p>Reading Comprehension (from phonics to complex texts), Writing Skills (grammar, essay development), and comprehensive Homework Help for all English assignments.</p>
+                <div class="service-card-footer">
+                    <button class="add-to-cart">Learn More</button>
+                    <div class="rating">★★★★★</div>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-card-header">
+                    <h3>French & Immersion Support</h3>
+                </div>
+                <p>Developing foundational French skills (basic reading/writing), Immersion support to navigate French-language curriculum, and building confidence in spoken French.</p>
+                <div class="service-card-footer">
+                    <button class="add-to-cart">Learn More</button>
+                    <div class="rating">★★★★★</div>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-card-header">
+                    <h3>General Science & Biology</h3>
+                </div>
+                <p>Foundational concepts across various scientific disciplines for elementary students. Introduction to basic biology in an engaging and understandable way.</p>
+                <div class="service-card-footer">
+                    <button class="add-to-cart">Learn More</button>
+                    <div class="rating">★★★★★</div>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-card-header">
+                    <h3>Homework & Study Skills</h3>
+                </div>
+                <p>Comprehensive homework help across all elementary & middle school core subjects. Teaching effective study habits, organizational skills, and empowering students to approach challenges positively.</p>
+                <div class="service-card-footer">
+                    <button class="add-to-cart">Learn More</button>
+                    <div class="rating">★★★★★</div>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-card-header">
+                    <h3>Multilingual & Cultural Support</h3>
+                </div>
+                <p>Language support in English, Urdu, Hindi (spoken), Arabic, and French. Culturally aligned approach that understands and respects diverse family backgrounds for a trustworthy experience.</p>
+                <div class="service-card-footer">
+                    <button class="add-to-cart">Learn More</button>
+                    <div class="rating">★★★★★</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about-us" class="section"> <!-- Updated ID -->
+        <h2 class="section-title">Our Story:</h2>
+        <div class="about-showcase">
+            <div>
+                <p class="about-text"><strong>Bridge the Gap Tutoring was created to solve a quiet problem in our community.</strong> Many children are falling behind, not because they lack ability, but because they don’t get the right support, feel unsure of themselves, or don’t have someone who truly understands their academic needs.</p>
+
+                <p class="about-text">We support students in Grades 1–8 with tutoring that <strong> raises marks, builds confidence, and makes learning feel good again. </strong> Every session is calm, clear, and personalized to your child’s pace and learning style.</p>
+
+                <p class="about-text">Our tutors come from strong academic backgrounds, speak multiple languages, and deeply understand the values of our community. We focus on communication that is patient, culturally respectful, and effective, so that both children and parents feel at ease.</p>
+
+                <p class="about-text">This isn’t just tutoring. It’s the kind of support that helps your child succeed in school, feel proud of themselves, and grow into their full potential.</p>
+
+                <p class="about-text">And most importantly, we’re honest, caring, and affordable. No pressure. No false promises. Just real help you can trust.</p>
+
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-number">4</span>
+                        <span class="stat-label">Expert Tutors</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">6</span>
+                        <span class="stat-label">Core Subjects</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">Languages Supported</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <!-- Replace with an actual image of your team/family tutoring or a professional, friendly portrait -->
+                <img src="images/485d0c57-081a-4674-be96-1b032ec22783.png" alt="Bridge the Gap Tutoring Team" style="max-width: 100%; height: auto; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+            </div>
+        </div>
+        <div class="features-showcase" style="margin-top: 4rem;">
+            <h3 class="section-title" style="font-size: 2rem; margin-bottom: 2rem;">Why Families Choose Us</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                <div class="feature-premium">
+                    <div class="feature-icon-premium">🌟</div>
+                    <div class="feature-content">
+                        <h4>Culturally Sensitive</h4>
+                        <p>Tutors who understand and respect diverse family backgrounds and values.</p>
+                    </div>
+                </div>
+                <div class="feature-premium">
+                    <div class="feature-icon-premium">🧠</div>
+                    <div class="feature-content">
+                        <h4>Confidence Builders</h4>
+                        <p>Focus on empowering children to feel capable and enjoy the learning process.</p>
+                    </div>
+                </div>
+                <div class="feature-premium">
+                    <div class="feature-icon-premium">📚</div>
+                    <div class="feature-content">
+                        <h4>Academic Excellence</h4>
+                        <p>Strong academic backgrounds from UofT in science, psychology, and engineering.</p>
+                    </div>
+                </div>
+                <div class="feature-premium">
+                    <div class="feature-icon-premium">🗣️</div>
+                    <div class="feature-content">
+                        <h4>Multilingual Support</h4>
+                        <p>Fluent in English, Urdu, Hindi (spoken), Arabic, and French for diverse needs.</p>
+                    </div>
+                </div>
+                <div class="feature-premium">
+                    <div class="feature-icon-premium">💡</div>
+                    <div class="feature-content">
+                        <h4>Unlock Hidden Potential</h4>
+                        <p>Beyond grades, we inspire curiosity and nurture intrinsic motivation for lifelong learning.</p>
+                    </div>
+                </div>
+                <div class="feature-premium">
+                    <div class="feature-icon-premium">💰</div>
+                    <div class="feature-content">
+                        <h4>Accessible & Affordable</h4>
+                        <p>High-quality tutoring designed to be within reach for every family's budget.</p>
+                    </div>
+                </div>
+                <div class="feature-premium">
+                    <div class="feature-icon-premium">📈</div>
+                    <div class="feature-content">
+                        <h4>Clear Progress Reports</h4>
+                        <p>Bi-weekly private reports on student progress, ensuring transparency without anxiety.</p>
+                    </div>
+                </div>
+                <div class="feature-premium">
+                    <div class="feature-icon-premium">🗓️</div>
+                    <div class="feature-content">
+                        <h4>Weekly Updates & Meetings</h4>
+                        <p>Weekly summaries of topics covered, and monthly parent meetings to discuss growth, goals & interests.</p>
+                    </div>
+                </div>
+                <div class="feature-premium">
+                    <div class="feature-icon-premium">🌱</div>
+                    <div class="feature-content">
+                        <h4>Holistic Child Development</h4>
+                        <p>Beyond academics, we spark beneficial interests and build communication skills for life.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="section">
+        <div class="contact-premium">
+            <h2 class="section-title">Ready to Start Their Journey?</h2>
+            <p style="font-size: 1.2rem; color: var(--text-dark); margin-bottom: 2rem;">Book a free 45-minute trial session today!</p>
+            <div class="contact-grid">
+                <div class="contact-card-premium">
+                    <span class="contact-icon">📧</span>
+                    <h3>Email Us</h3>
+                    <p>tutoringwithbtg@gmail.com</p>
+                </div>
+                <div class="contact-card-premium">
+                    <span class="contact-icon">📞</span>
+                    <h3>Call Us</h3>
+                    <p>(647) 703-7318</p>
+                </div>
+                <div class="contact-card-premium">
+                    <span class="contact-icon">🌐</span>
+                    <h3>Online Sessions</h3>
+                    <p>Zoom, Google Meet, WhatsApp Video</p>
+                </div>
+            </div>
+            <p style="font-size: 1.1rem; color: var(--text-dark); margin-top: 3rem;">
+                Or, fill out the form below to get in touch:
+            </p>
+            <!-- Contact form (using Tailwind classes for consistent styling) -->
+            <form id="contact-form-btg"
+            name="contact-btg-tutoring"
+            method="POST"
+            data-netlify="true"
+            netlify>
+            
+            <input type="hidden" name="form-name" value="contact-btg-tutoring">
+
+            <div style="margin-bottom: 1rem;">
+                <label for="child-name" style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-dark);">Child's Name:</label>
+                <input type="text" id="child-name" name="child-name" required
+                    style="width: 100%; padding: 0.75rem; border: 1px solid #D1D5DB; border-radius: 8px;">
+            </div>
+
+            <div style="margin-bottom: 1rem;">
+                <label for="parent-name" style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-dark);">Parent/Guardian Name:</label>
+                <input type="text" id="parent-name" name="parent-name" required
+                    style="width: 100%; padding: 0.75rem; border: 1px solid #D1D5DB; border-radius: 8px;">
+            </div>
+
+            <div style="margin-bottom: 1rem;">
+                <label for="email" style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-dark);">Your Email:</label>
+                <input type="email" id="email" name="email" required
+                    style="width: 100%; padding: 0.75rem; border: 1px solid #D1D5DB; border-radius: 8px;">
+            </div>
+
+            <div style="margin-bottom: 1rem;">
+                <label for="phone" style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-dark);">Phone (Optional):</label>
+                <input type="tel" id="phone" name="phone" value="(647) 703-7318"
+                    style="width: 100%; padding: 0.75rem; border: 1px solid #D1D5DB; border-radius: 8px;">
+            </div>
+
+            <div style="margin-bottom: 1rem;">
+                <label for="grade" style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-dark);">Child's Grade Level:</label>
+                <input type="text" id="grade" name="grade"
+                    style="width: 100%; padding: 0.75rem; border: 1px solid #D1D5DB; border-radius: 8px;">
+            </div>
+
+            <div style="margin-bottom: 1rem;">
+                <label for="subject" style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-dark);">Subject(s) of Interest:</label>
+                <input type="text" id="subject" name="subject-of-interest"
+                    style="width: 100%; padding: 0.75rem; border: 1px solid #D1D5DB; border-radius: 8px;">
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+                <label for="message" style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-dark);">How can we help?</label>
+                <textarea id="message" name="message" rows="4" required
+                        style="width: 100%; padding: 0.75rem; border: 1px solid #D1D5DB; border-radius: 8px;"></textarea>
+            </div>
+
+            <button type="submit" class="cta-primary" style="width: 100%;">Book Free Trial / Send Inquiry</button>
+            </form>
+
+        </div>
+    </section>
+    
+    <footer class="footer-premium">
+        <p>&copy; 2025 Bridge the Gap Tutoring. All rights reserved. | Cultivating Confidence in Every Child.</p>
+        <p style="margin-top: 0.5rem;"><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+    
+    <script>
+        // Scroll progress bar
+        window.addEventListener('scroll', () => {
+            const scrolled = (window.pageYOffset / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            document.getElementById('scrollBar').style.width = scrolled + '%';
+        });
+        
+        // Navigation scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+        
+        // Form submission for Bridge the Gap Tutoring
+        const btgContactForm = document.getElementById('contact-form-btg');
+        const btgMessageBox = document.createElement('div'); // Create dynamic message box
+        btgMessageBox.innerHTML = `
+            <div style="position: fixed; inset: 0; background: rgba(10,10,10,0.75); display: flex; justify-content: center; align-items: center; z-index: 9999;">
+                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); text-align: center; max-width: 400px; width: 90%;">
+                    <h3 style="font-size: 1.8rem; font-weight: 700; color: #1F2937; margin-bottom: 1rem;">Inquiry Sent!</h3>
+                    <p style="color: #4B5563; margin-bottom: 1.5rem;">Thank you for contacting Bridge the Gap Tutoring. We will get back to you shortly to schedule your free trial session!</p>
+                    <button id="close-btg-msg-box" style="background: var(--primary); color: white; padding: 0.8rem 1.5rem; border-radius: 25px; font-weight: 600; cursor: pointer; transition: background 0.3s ease;">Close</button>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(btgMessageBox);
+        btgMessageBox.style.display = 'none'; // Initially hidden
+
+        document.getElementById('close-btg-msg-box').addEventListener('click', () => {
+            btgMessageBox.style.display = 'none';
+        });
+
+        btgContactForm.addEventListener('submit', async function(event) {
+            event.preventDefault(); 
+
+            const formData = new FormData(btgContactForm);
+            formData.append('form-name', btgContactForm.getAttribute('name')); // Ensure form-name is sent
+
+            try {
+                const response = await fetch('/', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: new URLSearchParams(formData).toString()
+                });
+
+                if (response.ok) {
+                    btgMessageBox.style.display = 'flex'; // Show custom success message
+                    btgContactForm.reset(); // Clear the form
+                } else {
+                    alert('Submission failed. Please try again later.'); // Generic fallback for failure
+                }
+            } catch (error) {
+                console.error('Error submitting form:', error);
+                alert('There was an error submitting your request. Please check your internet connection and try again.');
+            }
+        });
+
+        // "Add to Cart" functionality adapted for "Learn More"
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function() {
+                this.textContent = 'Contact Us!';
+                this.style.background = 'var(--primary)'; /* Change to blue on click */
+                this.style.color = 'white';
+                setTimeout(() => {
+                    this.textContent = 'Learn More';
+                    this.style.background = 'var(--accent)'; /* Reset to accent yellow */
+                    this.style.color = 'var(--primary)'; /* Reset text color */
+                }, 2000);
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
