@@ -50,6 +50,7 @@
             background: rgba(255,255,255,0.9); /* Lighter, subtle transparent white */
             border-bottom: 1px solid rgba(0,0,0,0.05); /* Subtle border */
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Light shadow */
+             z-index: 10002; 
         }
         
         .nav.scrolled {
@@ -628,13 +629,6 @@
             <h3 class="section-title" style="font-size: 2rem; margin-bottom: 2rem;">Why Families Choose Us</h3>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
                 <div class="feature-premium">
-                    <div class="feature-icon-premium">🌟</div>
-                    <div class="feature-content">
-                        <h4>Culturally Sensitive</h4>
-                        <p>Tutors who understand and respect diverse family backgrounds and values.</p>
-                    </div>
-                </div>
-                <div class="feature-premium">
                     <div class="feature-icon-premium">🧠</div>
                     <div class="feature-content">
                         <h4>Confidence Builders</h4>
@@ -656,38 +650,10 @@
                     </div>
                 </div>
                 <div class="feature-premium">
-                    <div class="feature-icon-premium">💡</div>
-                    <div class="feature-content">
-                        <h4>Unlock Hidden Potential</h4>
-                        <p>Beyond grades, we inspire curiosity and nurture intrinsic motivation for lifelong learning.</p>
-                    </div>
-                </div>
-                <div class="feature-premium">
-                    <div class="feature-icon-premium">💰</div>
-                    <div class="feature-content">
-                        <h4>Accessible & Affordable</h4>
-                        <p>High-quality tutoring designed to be within reach for every family's budget.</p>
-                    </div>
-                </div>
-                <div class="feature-premium">
-                    <div class="feature-icon-premium">📈</div>
-                    <div class="feature-content">
-                        <h4>Clear Progress Reports</h4>
-                        <p>Bi-weekly private reports on student progress, ensuring transparency without anxiety.</p>
-                    </div>
-                </div>
-                <div class="feature-premium">
                     <div class="feature-icon-premium">🗓️</div>
                     <div class="feature-content">
                         <h4>Weekly Updates & Meetings</h4>
                         <p>Weekly summaries of topics covered, and monthly parent meetings to discuss growth, goals & interests.</p>
-                    </div>
-                </div>
-                <div class="feature-premium">
-                    <div class="feature-icon-premium">🌱</div>
-                    <div class="feature-content">
-                        <h4>Holistic Child Development</h4>
-                        <p>Beyond academics, we spark beneficial interests and build communication skills for life.</p>
                     </div>
                 </div>
             </div>
@@ -747,7 +713,7 @@
 
             <div style="margin-bottom: 1rem;">
                 <label for="phone" style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-dark);">Phone (Optional):</label>
-                <input type="tel" id="phone" name="phone" value="(647) 703-7318"
+                <input type="tel" id="phone" name="phone" 
                     style="width: 100%; padding: 0.75rem; border: 1px solid #D1D5DB; border-radius: 8px;">
             </div>
 
