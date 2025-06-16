@@ -518,6 +518,7 @@
     <!-- Calendly inline widget begin -->
     <div class="calendly-inline-widget" data-url="https://calendly.com/tutoringwithbtg" style="min-width:320px;height:700px;"></div>
     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    
     <!-- Calendly inline widget end -->
 
     <section id="services" class="section">
@@ -665,30 +666,44 @@
         </div>
     </section>
     
-    <section id="contact" class="section">
-        <div class="contact-premium">
-            <h2 class="section-title">Ready to Start Their Journey?</h2>
-            <p style="font-size: 1.2rem; color: var(--text-dark); margin-bottom: 2rem;">Book a free 45-minute trial session today!</p>
-            <div class="contact-grid">
-                <div class="contact-card-premium">
-                    <span class="contact-icon">📧</span>
-                    <h3>Email Us</h3>
-                    <p>tutoringwithbtg@gmail.com</p>
-                </div>
-                <div class="contact-card-premium">
-                    <span class="contact-icon">📞</span>
-                    <h3>Call Us</h3>
-                    <p>(647) 703-7318</p>
-                </div>
-                <div class="contact-card-premium">
-                    <span class="contact-icon">🌐</span>
-                    <h3>Online Sessions</h3>
-                    <p>Zoom, Google Meet, WhatsApp Video</p>
-                </div>
-            </div>
-            <p style="font-size: 1.1rem; color: var(--text-dark); margin-top: 3rem;">
-                Or, fill out the form below to get in touch:
-            </p>
+ <section id="contact" class="section">
+  <div class="contact-premium">
+    <h2 class="section-title">Ready to Start Their Journey?</h2>
+    <p style="font-size: 1.6rem; color: var(--text-dark); margin-bottom: 2rem;">
+      <strong>Book a free 45-minute trial session today!</strong>
+    </p>
+
+    <div class="contact-grid">
+      <!-- Email -->
+      <a href="mailto:tutoringwithbtg@gmail.com" style="text-decoration: none; color: inherit;">
+        <div style="background-color: #f0f8ff; padding: 20px; border-radius: 16px; text-align: center; transition: all 0.2s ease; cursor: pointer; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); min-height: 220px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <span style="font-size: 40px;">📧</span>
+          <h3>Email Us</h3>
+          <p>tutoringwithbtg@gmail.com</p>
+        </div>
+      </a>
+
+      <!-- Phone -->
+      <a href="tel:16477037318" style="text-decoration: none; color: inherit;">
+        <div style="background-color: #f0f8ff; padding: 20px; border-radius: 16px; text-align: center; transition: all 0.2s ease; cursor: pointer; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); min-height: 220px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <span style="font-size: 40px;">📞</span>
+          <h3>Call Us</h3>
+          <p>(647) 703-7318</p>
+        </div>
+      </a>
+
+      <!-- Online Sessions (not clickable) -->
+      <div style="background-color: #f0f8ff; padding: 20px; border-radius: 16px; text-align: center; transition: all 0.2s ease; cursor: default; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); min-height: 220px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <span style="font-size: 40px;">🌐</span>
+        <h3>Online Sessions</h3>
+        <p>Zoom, Google Meet,<br>WhatsApp Video</p>
+      </div>
+    </div>
+
+    <p style="font-size: 1.1rem; color: var(--text-dark); margin-top: 3rem;">
+      Or, fill out the form below to get in touch:
+    </p>
+
             <!-- Contact form (using Tailwind classes for consistent styling) -->
             <form id="contact-form-btg"
             name="contact-btg-tutoring"
@@ -697,12 +712,6 @@
             netlify>
             
             <input type="hidden" name="form-name" value="contact-btg-tutoring">
-
-            <div style="margin-bottom: 1rem;">
-                <label for="child-name" style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-dark);">Child's Name:</label>
-                <input type="text" id="child-name" name="child-name" required
-                    style="width: 100%; padding: 0.75rem; border: 1px solid #D1D5DB; border-radius: 8px;">
-            </div>
 
             <div style="margin-bottom: 1rem;">
                 <label for="parent-name" style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-dark);">Parent/Guardian Name:</label>
@@ -717,27 +726,9 @@
             </div>
 
             <div style="margin-bottom: 1rem;">
-                <label for="phone" style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-dark);">Phone (Optional):</label>
-                <input type="tel" id="phone" name="phone" 
-                    style="width: 100%; padding: 0.75rem; border: 1px solid #D1D5DB; border-radius: 8px;">
-            </div>
-
-            <div style="margin-bottom: 1rem;">
                 <label for="grade" style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-dark);">Child's Grade Level:</label>
                 <input type="text" id="grade" name="grade"
                     style="width: 100%; padding: 0.75rem; border: 1px solid #D1D5DB; border-radius: 8px;">
-            </div>
-
-            <div style="margin-bottom: 1rem;">
-                <label for="subject" style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-dark);">Subject(s) of Interest:</label>
-                <input type="text" id="subject" name="subject-of-interest"
-                    style="width: 100%; padding: 0.75rem; border: 1px solid #D1D5DB; border-radius: 8px;">
-            </div>
-
-            <div style="margin-bottom: 1.5rem;">
-                <label for="message" style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-dark);">How can we help?</label>
-                <textarea id="message" name="message" rows="4" required
-                        style="width: 100%; padding: 0.75rem; border: 1px solid #D1D5DB; border-radius: 8px;"></textarea>
             </div>
 
             <button type="submit" class="cta-primary" style="width: 100%;">Book Free Trial / Send Inquiry</button>
